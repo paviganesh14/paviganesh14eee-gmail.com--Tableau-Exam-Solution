@@ -1,0 +1,207 @@
+Note :
+I have taken sample superstore data and its fields to create examples for all the questions
+
+Question 1:
+Line chart:
+A line chart, in a nutshell, displays trends over time. Also called a line graph, a line chart displays information using data points (called “markers”) on an XY grid. These data points are then connected by straight lines to visually show a trend. 
+Line charts are great for measuring the amount of something over time. They’re also versatile tools, and can be used across industries or company departments.
+
+Some examples of line chart presentations include:
+A marketing team’s projected customer base growth for the next year
+The finance department’s report of company cash on hand over time
+Statistics for experiments performed by a team of research scientists
+How many sales occurred in the past few months
+More than one line can be plotted on a line chart, too. In the example of projected customer base growth, you might plot projected growth for the upcoming year. When that year is completed, you can use that existing line chart to plot how the team actually performed. You’d get a side-by-side comparison of projected growth and actual growth.
+
+Building Line charts:
+Connect to the Sample - Superstore data source.
+Drag the Order Date dimension to Columns.
+Tableau aggregates the date by year, and creates column headers.
+Drag the Sales measure to Rows.
+Tableau aggregates Sales as SUM and displays a simple line chart.
+Drag the Profit measure to Rows and drop it to the right of the Sales measure.
+Tableau creates separate axes along the left margin for Sales and Profit.
+
+The Area Chart:
+An area chart, also called an area graph, is similar to a line graph in that it displays changes in data over time. Data points are marked on an XY grid, then connected to form a line. From there, the area between the plotted line and the x-axis is shaded in with colors or textures. 
+It may be easier for your audience to see and understand the data with a colorful area chart template instead of a line chart, especially if the differences between your data values are large enough to be displayed visually. 
+
+Ex:
+
+Display large differences between your data points
+Show multiple values over time
+Plot data over a longer period of time
+Area charts are versatile because you can compare multiple data sets. An area graph that compares different data sets is called an overlapping area chart. For example, if you want to see how many women’s clothing items and men’s clothing items your apparel company sold last quarter, you’d plot data points for each category and fill in those areas with a different color. You can see at a glance which apparel line performed better in quarterly sales. 
+An area graph that breaks down a total data set into smaller related sets is called a stacked area chart. If your hypothetical apparel company wanted to see which types of women’s clothing items performed best over the last quarter, you’d plot each product on your graph and fill them in with different colors. That way, you can compare each product to your overall quarterly sales for women’s clothing.
+
+Steps to create area graph:
+
+Step 1: Open Visualization Pane in Tableau 
+Step 2: Select Area Chart in Visualization Pane
+Step 3: Add Measure
+Step 4: Add Dimensions to the Colors Box
+Step 5: Basic Area Chart will be created 
+
+Question 2:
+
+In the Flow pane, click the plus  icon, and select Aggregate. A new aggregation step displays in the Flow pane and the Profile pane updates to show the aggregate and group profile.
+Drag fields from the left pane to the Grouped Fields pane (the fields that make the row) or to the Aggregated Fields pane (the data that will be aggregated and presented at the level of the grouped fields).
+You can also:
+Drag and drop fields between the two panes.
+Search for fields in the list and select only the fields you want to include in your aggregation.
+Double-click a field to add it to the left or right pane.
+Change the function of the field to automatically add it to the appropriate pane.
+Click Add All or Remove All to bulk apply or remove fields.
+Apply certain cleaning operations to fields. For more information abut which cleaning options are available, see About cleaning operations(Link opens in a new window).
+Fields are distributed between the Grouped Fields and Aggregated Fields columns based on their data type. Click the group or aggregation type (for example, AVG or SUM) headings to change the group or aggregation type.
+In the data grids below the aggregation and group profile, you can see a sample of the members of the group or aggregation.
+Any cleaning operations that are made to the fields are tracked in the Changes pane.
+JOIN:
+Left 	For each row, includes all values from the left table and corresponding matches from the right table. When a value in the left table doesn't have a corresponding match in the right table, you see a null value in the join results.
+lnner 	For each row, includes values that have matches in both tables.
+Right 	For each row, includes all values from the right table and corresponding matches from the left table. When a value in the right table doesn't have a corresponding match in the left table, you see a null value in the join results.
+leftOnly 	For each row, includes only values from the left table that don't match any values from the right table. Field values from the right table show as null values in the join results.
+rightOnly 	For each row, includes only values from the right table that don't match any values from the left table. Field values from the left table show as null values in the join results.
+notInner 	For each row, includes all of the values from the right and the left table that don't match.
+Full 	For each row, includes all values from both tables. When a value from either table doesn't have a match with the other table, you see a null value in the join results.
+
+
+Question 3:
+
+To assign a color to marks in the view, do one of the following:
+On the Marks card, click Color, and then select a color from the menu.
+This updates all marks in the view to the color you choose. All marks have a default color, even when there are no fields on Color on the Marks card. For most marks, blue is the default color; for text, black is the default color.
+From the Data pane, drag a field to Color on the Marks card.
+Tableau applies different colors to marks based on the field’s values and members. For example, if you drop a discrete field (a blue field), such as Category, on Color, the marks in the view are broken out by category, and each category is assigned a color.
+dit colors
+To change the color palette or customize how color is applied to your marks:
+On the Marks card, click Color > Edit Color
+Change the size of marks
+To change the size of marks in the view, do one of the following:
+On the Marks card, click Size, and then move the slider to the left or right.
+The Size slider affects different marks in different ways, as described in the following table.
+
+MARK TYPE	DESCRIPTION
+Circle, Square, Shape, Text	Makes the mark bigger or smaller.
+Bar, Gantt Bar	Makes bars wider or narrower.
+Line	Makes lines thicker or thinner.
+Polygon	You cannot change the size of a polygon.
+Pie	Makes the overall size of the pie bigger and smaller.
+The size of your data view is not modified when you change marks using the Size slider. However, if you change the view size, the mark size might change to accommodate the new formatting. For example, if you make the table bigger, the marks might become bigger as well.
+From the Data pane, drag a field to Size on the Marks card.
+When you place a discrete field on Size on the Marks card, Tableau separates the marks according to the members in the dimension, and assigns a unique size to each member. Because size has an inherent order (small to big), categorical sizes work best for ordered data like years or quarters.
+Size-encoding data with a discrete field separates the marks in the same way as the Detail property does, and then provides additional information (a size) for each mark. For more information, see Separate marks in the view by dimension members . When you add categorical size encoding to a view, Tableau displays a legend showing the sizes assigned to each member in the field on the Size target. You can modify how these sizes are distributed using the Edit Sizes dialog box.
+When you place a continuous field on Size on the Marks card, Tableau draws each mark with a different size using a continuous range. The smallest value is assigned the smallest sized mark and the largest value is represented by the largest mark.
+When you add quantitative size encoding to the view, Tableau displays a legend showing the range of values over which sizes are assigned. You can modify how these sizes are distributed using the Edit Sizes dialog box
+
+Question 4:
+Left 	For each row, includes all values from the left table and corresponding matches from the right table. When a value in the left table doesn't have a corresponding match in the right table, you see a null value in the join results.
+lnner 	For each row, includes values that have matches in both tables.
+Right 	For each row, includes all values from the right table and corresponding matches from the left table. When a value in the right table doesn't have a corresponding match in the left table, you see a null value in the join results.
+leftOnly 	For each row, includes only values from the left table that don't match any values from the right table. Field values from the right table show as null values in the join results.
+rightOnly 	For each row, includes only values from the right table that don't match any values from the left table. Field values from the left table show as null values in the join results.
+notInner 	For each row, includes all of the values from the right and the left table that don't match.
+Full 	For each row, includes all values from both tables. When a value from either table doesn't have a match with the other table, you see a null value in the join results.
+
+Question 5:
+
+Connect to a data source
+Create a new worksheet
+Open a new dashboard
+set size of dashboard
+add relevant sheets to dashboard
+add required filters 
+add objects
+chnage to presentation mode if needed.
+
+Question 6:
+
+Heat Map:
+
+Tableau heatmap is a visualization where marks on the view are represented using color. And as the density of records increases per mark, a more intense color is displayed (heating up). When displayed as a crosstab – it forms a highlight table.
+Heatmaps can also be displayed in geographical maps to show trends and patterns (density maps).
+
+Eg: sample superstore data:
+
+Drag Order Date to the columns shelf.
+Drag product Sub-Category to the rows shelf.
+Drag Sales to the text shelf.
+Under Show Me Tab, select ‘Heat Maps’
+Changing marks to circles
+And adding Profit to color shelf
+
+Scatter Plot:
+The scatter plot is a visualization used to compare two measures. More aspects of the data set can be expressed through the use of shape, color, and size within the scatter plot. Also reference lines can be added to express correlation. Scatter plots offer a good way to do ad hoc analysis.
+In Tableau you create a scatter plot by placing a measure in the columns shelf and another measure in the rows shelf.
+By doing this you are asking Tableau to compare two numerical values. Tableau chooses by default a scatter plot as a default visualization for this.
+The first visualization of your scatter plot might not be very exciting, a single point showing the sum of all values for both measures. One way to develop your scatter plot from here is to go to Analysis and click on  Aggregate measures.
+Alternatively, you can bring dimensions to add detail , you can add additional measures and/or dimensions to the Rows and Columns shelves to create multiple one-mark scatter plots in the view.
+
+Question 7:
+
+Open Tableau and connect to the Sample-Superstore saved data source.
+Navigate to a new worksheet.
+From the Data pane, under Dimensions, drag Order Date to the Rows shelf.
+The dimension updates to YEAR(Order Date).
+On the Rows shelf, right-click YEAR(Order Date) and select Quarter.
+On the Rows shelf, click the + icon on QUARTER(Order Date).
+MONTH(Order Date) is added to the shelf.
+From the Data pane, under Dimensions, drag Order Date to the Columns shelf.
+The dimension updates to YEAR(Order Date) again.
+From the Data pane, under Measures, drag Sales to Text on the Marks card.
+On the Marks card, right-click SUM(Sales) and select Add Table Calculation.
+In the Table Calculation dialog box that opens, do the following:
+For Calculation Type: select Difference From.
+For more information about the types of table calculations you can use in Tableau, and how you can configure them, see Table Calculation Types.
+For Compute Using, select Table (across).
+For more information about these options, see The basics: addressing and partitioning section.
+Note that as you select how to compute the calculation, the visualization updates with visual indicators to guide you.When finished, click the X in the top corner of the Table Calculation dialog box to exit it.
+The calculation is applied to the values in the visualization.
+
+Question 8:
+The reference distribution is a distribution that uses the reference line for the division. The visualization is distributed in some parts with the help of a reference line as it works as a distribution boundary between these parts of the visualization.
+ 
+Steps to create reference distribution band in tableau:
+
+To add a reference distribution, go to the Analytics pane, and drag the Distribution Band to the view. You will have three options for distribution: table, pane, and cell level. Select Pane from the three options for this demo.
+Once you select the Pane option, a pop-up window is generated that requires further input. The first input is to provide the Value. These are percentile values and you will provide the values of 25, 50, and 75. This will display the information regarding the percentage of data points falling below these percentile values.
+The second input under Computation is Label. Select the Custom option.
+The next input required is for Formatting. Provide the inputs as shown below. The Fill Below option will ensure the points below the percentile is represented with different colors.
+Completing the above steps will produce the final output. You can see that there are three colors, which represent the percentage of data points falling below the three percentile levels of 25th Percentile, 50th percentile, and 75th Percentile, respectively.
+
+Question 9:
+
+Steps to make a pie chart:
+
+To make a Simple Pie Chart, pick one Dimension and one Measure. Take, for instance, the Region Dimension and the Profit Measure. In the colors and label markings, remove the Region Dimension. In the size mark, drop the Profit Measure. Select Pie as the chart type. The following graph displays/depicts the four zones in various colors.
+Drill-down Pie Charts
+You can choose a Dimension with a hierarchy, and the chart changes to reflect the level of the Dimension chosen as you go deeper into the hierarchy. You’ll use the dimension Sub-Category as an example, which contains two more levels: Manufacturer and Product Name. Take your Profit and put it in the Labels box.
+
+Bar chart:
+
+connect to data source
+eg:I have take sample super store data.
+drag the Order Date dimension to Columns and drag the Sales measure to Rows.
+On the Marks card, select Bar from the drop-down list.
+Drag the Ship Mode dimension to Color on the Marks card.
+To view data in the West region only, you can filter out the other regions. To do this, drag the Region dimension again, this time from the Data pane to the Filters shelf.
+In the Filter [Region] dialog box, clear the Central, East, and South check boxes, and then click OK.
+
+
+Question 10:
+
+Click the New Story tab.
+In the lower-left corner of the screen, choose a size for your story. Choose from one of the predefined sizes, or set a custom size, in pixels:
+By default, your story gets its title from the sheet name. To edit it, right-click the sheet tab, and choose Rename Sheet.
+If you're using Tableau Desktop, you can also rename a story by double-clicking the title.
+To start building your story, double-click a sheet on the left to add it to a story point.
+In Tableau Desktop, you can also drag sheets into your story point.
+When you add a sheet to a story point, that sheet remains connected to the original sheet. If you modify the original sheet, your changes will automatically be reflected on the story points that use it.
+If you are using Tableau Cloud to author on the web and the original sheet has Pause Auto Updates enabled, the story sheet will be blank until auto-updates are resumed.
+Click Add a caption to summarize the story point.
+In Tableau Desktop, you can highlight a key takeaway for your viewers by dragging a text object to the story worksheet and typing a comment.
+To further highlight the main idea of this story point, you can change a filter or sort on a field in the view. Then save your changes by clicking Update on the story toolbar above the navigator box:
+Add another story point by doing one of the following:
+Click Blank to use a fresh sheet for the next story point.
+Start customizing a story point and click Save as New on the toolbar above the navigator box.
+Click Duplicate to use the current story point as the basis for a new one.
